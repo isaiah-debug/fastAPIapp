@@ -29,7 +29,8 @@ pytest
 
 The `/` route displays messages from SQLite with the message text, creation timestamp, username, and user age.
 
-![Home route screenshot](screenshots/home.png)
+![Home route screenshot](<img width="2272" height="1451" alt="fastapiapp" src="https://github.com/user-attachments/assets/d7bf3ab7-4f02-43eb-8d7f-9b5d60f217fc" />
+)
 
 ## Submission Note
 

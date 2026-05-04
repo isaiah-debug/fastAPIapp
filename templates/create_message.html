@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Create Message - Message Board{% endblock %}
+
+{% block content %}
+  <section class="form-panel">
+    <h2>Create Message</h2>
+    {% if error %}
+      <p class="alert">{{ error }}</p>
+    {% endif %}
+    <form method="post" action="/create_message">
+      <label for="text">Message</label>
+      <textarea id="text" name="text" rows="5" required></textarea>
+      <button type="submit">Post Message</button>
+    </form>
+  </section>
+{% endblock %}

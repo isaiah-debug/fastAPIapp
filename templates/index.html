@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Message Board{% endblock %}
+
+{% block content %}
+  <section class="intro">
+    <div>
+      <h2>Recent Messages</h2>
+      <p>Messages are loaded from SQLite and sorted newest first.</p>
+    </div>
+    <img src="{{ url_for('static', path='message-board.png') }}" alt="Colorful message board illustration">
+  </section>
+
+  <section class="message-list" aria-label="Messages">
+    {% for message in messages %}
+      <article class="message">
+        <p class="message-text">{{ message.text }}</p>
+        <dl>
+          <div>
+            <dt>Created</dt>
+            <dd>{{ message.created_at }}</dd>
+          </div>
+          <div>
+            <dt>User</dt>
+            <dd>{{ message.username }}</dd>
+          </div>
+          <div>
+            <dt>Age</dt>
+            <dd>{{ message.age }}</dd>
+          </div>
+        </dl>
+      </article>
+    {% else %}
+      <p class="empty-state">No messages have been created yet.</p>
+    {% endfor %}
+  </section>
+{% endblock %}
